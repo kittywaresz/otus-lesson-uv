@@ -1,0 +1,15 @@
+[project]
+name = "my-webapp"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "fastapi[standard]>=0.162.0",
+]
+
+[dependency-groups]
+dev = [
+    "fastapi-cli>=0.0.32",
+    "ruff>=0.17.3",
+]
