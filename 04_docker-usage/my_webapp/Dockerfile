@@ -27,7 +27,7 @@ RUN --mount=type=cache,target=/root/.cache/uv \
     uv sync --frozen --no-editable
 
 
-# рантайм слой без бинарей uv
+# рантайм стейдж без бинарей uv
 FROM docker.io/python:3.14-slim
 
 RUN groupadd --system --gid 999 nonroot \

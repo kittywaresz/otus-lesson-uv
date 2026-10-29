@@ -20,7 +20,11 @@ docker build -t otus-webapp:v0.0.1 .
 docker run --rm -it --entrypoint bash otus-webapp:v0.0.1
 
 # запуск
-docker run --rm otus-webapp:v0.0.1 --app-dir src my_webapp.app:app --host=0.0.0.0 --port 8080
+docker run --rm --publish 8080:80 otus-webapp:v0.0.1 --app-dir src my_webapp.app:app --host=0.0.0.0 --port 80
+
+# проверка с хоста
+curl -X 'GET' \
+  'http://127.0.0.0:8080/health'
 ```
 
 ## Особенности `uv` в Docker-сборках
